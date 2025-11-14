@@ -53,6 +53,10 @@ export default function RootLayout({
               <Link href="/dashboard" className="hover:text-blue-600 transition">
                 Dashboard
               </Link>
+
+              <Link href="/menu" className="hover:text-blue-600 transition">
+                Menu
+              </Link>
             </nav>
           </aside>
 
