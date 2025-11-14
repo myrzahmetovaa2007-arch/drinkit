@@ -8,22 +8,22 @@ export default function MenuPage() {
         {
           name: "Latte",
           price: "1,600 ₸",
-          img: "https://images.unsplash.com/photo-1541167760496-1628856ab772?w=800",
+          img: "https://images.unsplash.com/photo-1511920170033-f8396924c348",
         },
         {
           name: "Cappuccino",
           price: "1,700 ₸",
-          img: "https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=800",
+          img: "https://images.unsplash.com/photo-1509042239860-f550ce710b93",
         },
         {
           name: "Flat White",
           price: "1,800 ₸",
-          img: "https://images.unsplash.com/photo-1471533414550-0f2775ae97cc?w=800",
+          img: "https://images.unsplash.com/photo-1470337458703-46ad1756a187",
         },
         {
           name: "Caramel Macchiato",
           price: "2,100 ₸",
-          img: "https://images.unsplash.com/photo-1604917877939-36f6cb0a3a23?w=800",
+          img: "https://images.unsplash.com/photo-1559056199-641a0ac8b55e",
         },
       ],
     },
@@ -33,17 +33,17 @@ export default function MenuPage() {
         {
           name: "Iced Matcha Latte",
           price: "2,200 ₸",
-          img: "https://images.unsplash.com/photo-1626519326869-f8ce89e4f096?w=800",
+          img: "https://images.unsplash.com/photo-1593443320739-77f74939d0da",
         },
         {
           name: "Strawberry Matcha",
           price: "2,500 ₸",
-          img: "https://images.unsplash.com/photo-1657299175901-e33cb320af39?w=800",
+          img: "https://share.google/images/4H9KJljqOIDV3NSIr",
         },
         {
           name: "Matcha Lemonade",
           price: "2,000 ₸",
-          img: "https://images.unsplash.com/photo-1657299174909-d1627a775888?w=800",
+          img: "https://share.google/images/RY2GBr3IY30mkkSnd",
         },
       ],
     },
@@ -53,17 +53,17 @@ export default function MenuPage() {
         {
           name: "Peach Ice Tea",
           price: "1,500 ₸",
-          img: "https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=800",
+          img: "https://images.unsplash.com/photo-1551024709-8f23befc6f87",
         },
         {
           name: "Black Tea",
           price: "1,000 ₸",
-          img: "https://images.unsplash.com/photo-1505576391880-b3f9d713dcf0?w=800",
+          img: "https://images.unsplash.com/photo-1518972559570-7cc1309f3229",
         },
         {
           name: "Chai Latte",
           price: "1,900 ₸",
-          img: "https://images.unsplash.com/photo-1600271886742-f049cd451bba?w=800",
+          img: "https://images.unsplash.com/photo-1509042239860-f550ce710b93",
         },
       ],
     },
@@ -73,12 +73,12 @@ export default function MenuPage() {
         {
           name: "Berry Mix",
           price: "2,300 ₸",
-          img: "https://images.unsplash.com/photo-1574887058484-199c1d6c3dc8?w=800",
+          img: "https://share.google/images/qJpiVV4FclS8cmOrs",
         },
         {
           name: "Tropical Mango",
           price: "2,400 ₸",
-          img: "https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=800",
+          img: "https://share.google/images/S3N1aFQQ6udTS5CZw",
         },
       ],
     },
