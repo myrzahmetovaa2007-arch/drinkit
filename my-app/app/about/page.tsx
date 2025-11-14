@@ -108,7 +108,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             {[
               { name: "Aiz", role: "Founder & Creator" },
-              { name: "Devon", role: "UI/UX Designer" },
+              { name: "Aruzzhanaa", role: "UI/UX Designer" },
               { name: "Leo", role: "Content Strategist" },
             ].map((member, i) => (
               <div
