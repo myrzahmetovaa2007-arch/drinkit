@@ -4,6 +4,7 @@ import { useState } from "react";
 
 export default function HomePage() {
   const [faqOpen, setFaqOpen] = useState<number | null>(null);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const faq = [
     {
@@ -24,30 +25,168 @@ export default function HomePage() {
     },
   ];
 
+  const exploreMenu = [
+    {
+      category: "Coffee",
+      items: [
+        {
+          name: "Latte",
+          price: "1,600 ₸",
+          img: "https://images.unsplash.com/photo-1511920170033-f8396924c348",
+        },
+        {
+          name: "Cappuccino",
+          price: "1,700 ₸",
+          img: "https://images.unsplash.com/photo-1509042239860-f550ce710b93",
+        },
+        {
+          name: "Flat White",
+          price: "1,800 ₸",
+          img: "https://images.unsplash.com/photo-1470337458703-46ad1756a187",
+        },
+        {
+          name: "Caramel Macchiato",
+          price: "2,100 ₸",
+          img: "https://images.unsplash.com/photo-1559056199-641a0ac8b55e",
+        },
+      ],
+    },
+    {
+      category: "Matcha",
+      items: [
+        {
+          name: "Iced Matcha Latte",
+          price: "2,200 ₸",
+          img: "https://images.unsplash.com/photo-1593443320739-77f74939d0da",
+        },
+        {
+          name: "Strawberry Matcha",
+          price: "2,500 ₸",
+          img: "https://images.unsplash.com/photo-1587731287793-5cc2960d3eaf",
+        },
+        {
+          name: "Matcha Lemonade",
+          price: "2,000 ₸",
+          img: "https://images.unsplash.com/photo-1615485290358-dce3e1c2ba86",
+        },
+      ],
+    },
+    {
+      category: "Tea",
+      items: [
+        {
+          name: "Peach Ice Tea",
+          price: "1,500 ₸",
+          img: "https://images.unsplash.com/photo-1551024709-8f23befc6f87",
+        },
+        {
+          name: "Black Tea",
+          price: "1,000 ₸",
+          img: "https://images.unsplash.com/photo-1518972559570-7cc1309f3229",
+        },
+        {
+          name: "Chai Latte",
+          price: "1,900 ₸",
+          img: "https://images.unsplash.com/photo-1509042239860-f550ce710b93",
+        },
+      ],
+    },
+    {
+      category: "Smoothies",
+      items: [
+        {
+          name: "Berry Mix",
+          price: "2,300 ₸",
+          img: "https://images.unsplash.com/photo-1576402187878-974f70c890ad",
+        },
+        {
+          name: "Tropical Mango",
+          price: "2,400 ₸",
+          img: "https://images.unsplash.com/photo-1553531768-233c4242dfb7",
+        },
+      ],
+    },
+    {
+      category: "Milkshakes",
+      items: [
+        {
+          name: "Chocolate Shake",
+          price: "2,100 ₸",
+          img: "https://images.unsplash.com/photo-1587731287793-5cc2960d3eaf",
+        },
+        {
+          name: "Oreo Shake",
+          price: "2,500 ₸",
+          img: "https://images.unsplash.com/photo-1598514982600-b8f8b0af9f92",
+        },
+      ],
+    },
+  ];
+
   return (
     <div className="space-y-40">
 
-      {/* ----------------------------- HERO SECTION ----------------------------- */}
-      <section className="text-center pt-20 pb-32">
+      {/* ----------------------------- HERO ----------------------------- */}
+      <section className="text-center pt-20 pb-32 relative">
         <h1 className="text-6xl font-extrabold leading-tight">
           Welcome to <span className="text-blue-600">DrinkIt</span>
         </h1>
+
         <p className="mt-6 text-xl text-gray-600 max-w-2xl mx-auto">
-          Discover refreshing drink ideas, creative beverage recipes, and 
+          Discover refreshing drink ideas, creative beverage recipes, and
           everything you need to craft the perfect taste experience.
         </p>
 
         <div className="mt-10 flex justify-center gap-6">
-          <a className="px-8 py-4 bg-blue-600 text-white rounded-xl text-lg font-semibold hover:bg-blue-700 transition cursor-pointer">
+          <button
+            onClick={() => setMenuOpen(!menuOpen)}
+            className="px-8 py-4 bg-blue-600 text-white rounded-xl text-lg font-semibold hover:bg-blue-700 transition"
+          >
             Explore Menu
-          </a>
+          </button>
+
           <a className="px-8 py-4 border border-gray-300 rounded-xl text-lg font-semibold hover:bg-gray-100 transition cursor-pointer">
             Learn More
           </a>
         </div>
+
+        {/* ---------------- MENU DROPDOWN ---------------- */}
+        {menuOpen && (
+          <div className="absolute left-1/2 transform -translate-x-1/2 mt-6 w-[90%] max-w-6xl bg-white shadow-2xl rounded-2xl p-10 border z-50">
+            <h3 className="text-3xl font-bold mb-8 text-center">Explore Menu</h3>
+
+            <div className="space-y-14">
+              {exploreMenu.map((section, i) => (
+                <div key={i}>
+                  <h4 className="text-2xl font-semibold mb-6">{section.category}</h4>
+
+                  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                    {section.items.map((item, j) => (
+                      <div
+                        key={j}
+                        className="bg-gray-50 hover:bg-gray-100 transition rounded-xl overflow-hidden shadow-sm"
+                      >
+                        <img
+                          src={item.img}
+                          alt={item.name}
+                          className="w-full h-40 object-cover"
+                        />
+
+                        <div className="p-4">
+                          <h5 className="text-lg font-semibold">{item.name}</h5>
+                          <p className="text-blue-600 font-bold mt-1">{item.price}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
       </section>
 
-      {/* ----------------------------- FEATURES SECTION ----------------------------- */}
+      {/* ---------------- FEATURES ---------------- */}
       <section className="max-w-6xl mx-auto">
         <h2 className="text-4xl font-bold text-center mb-14">Why Choose DrinkIt?</h2>
 
@@ -89,7 +228,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ----------------------------- STATS SECTION ----------------------------- */}
+      {/* ---------------- STATS ---------------- */}
       <section className="bg-gray-50 py-28">
         <div className="max-w-6xl mx-auto text-center">
           <h2 className="text-4xl font-bold mb-14">Our Impact</h2>
@@ -109,11 +248,11 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ----------------------------- CTA SECTION ----------------------------- */}
+      {/* ---------------- CTA ---------------- */}
       <section className="text-center max-w-4xl mx-auto">
         <h2 className="text-4xl font-bold mb-6">Start Your Drink Journey Today</h2>
         <p className="text-gray-600 text-lg mb-10">
-          Join thousands of creators who use DrinkIt to build beautiful 
+          Join thousands of creators who use DrinkIt to build beautiful
           beverage menus, experiment with flavors, and spark inspiration.
         </p>
 
@@ -124,7 +263,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ----------------------------- FAQ SECTION ----------------------------- */}
+      {/* ---------------- FAQ ---------------- */}
       <section className="max-w-5xl mx-auto pb-20">
         <h2 className="text-4xl font-bold text-center mb-14">Frequently Asked Questions</h2>
 
@@ -150,7 +289,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ----------------------------- FOOTER ----------------------------- */}
+      {/* ---------------- FOOTER ---------------- */}
       <footer className="border-t py-10 text-center text-gray-600">
         <p>© {new Date().getFullYear()} DrinkIt. All rights reserved.</p>
       </footer>
