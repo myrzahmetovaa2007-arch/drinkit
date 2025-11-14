@@ -38,7 +38,7 @@ export default function MenuPage() {
         {
           name: "Strawberry Matcha",
           price: "2,500 ₸",
-          img: "https://share.google/images/4H9KJljqOIDV3NSIr",
+          img: "https://pin.it/43x1jhO2w",
         },
         {
           name: "Matcha Lemonade",
