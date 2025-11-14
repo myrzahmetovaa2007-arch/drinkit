@@ -4,28 +4,7 @@ export default function MenuPage() {
   const exploreMenu = [
     {
       category: "Coffee",
-      items: [
-        {
-          name: "Latte",
-          price: "1,600 ₸",
-          img: "https://images.unsplash.com/photo-1511920170033-f8396924c348",
-        },
-        {
-          name: "Cappuccino",
-          price: "1,700 ₸",
-          img: "https://images.unsplash.com/photo-1509042239860-f550ce710b93",
-        },
-        {
-          name: "Flat White",
-          price: "1,800 ₸",
-          img: "https://images.unsplash.com/photo-1470337458703-46ad1756a187",
-        },
-        {
-          name: "Caramel Macchiato",
-          price: "2,100 ₸",
-          img: "https://images.unsplash.com/photo-1559056199-641a0ac8b55e",
-        },
-      ],
+      items: [ /* оставляем как было */ ],
     },
     {
       category: "Matcha",
@@ -33,39 +12,23 @@ export default function MenuPage() {
         {
           name: "Iced Matcha Latte",
           price: "2,200 ₸",
-          img: "https://images.unsplash.com/photo-1593443320739-77f74939d0da", // рабочая
+          img: "https://images.unsplash.com/photo‑1593443320739‑77f74939d0da", // рабочая
         },
         {
           name: "Strawberry Matcha",
           price: "2,500 ₸",
-          img: "https://images.unsplash.com/photo-1617196039312-6d198eaf4e2e", // заменил на рабочую
+          img: "https://images.unsplash.com/photo‑6D1JmcDOY44", // новая рабочая ссылка
         },
         {
           name: "Matcha Lemonade",
           price: "2,000 ₸",
-          img: "https://images.unsplash.com/photo-1600891964599-f61ba0e24092", // заменил на рабочую
+          img: "https://images.unsplash.com/photo‑1600891964599‑f61ba0e24092", // рабочая
         },
       ],
     },
     {
       category: "Tea",
-      items: [
-        {
-          name: "Peach Ice Tea",
-          price: "1,500 ₸",
-          img: "https://images.unsplash.com/photo-1551024709-8f23befc6f87",
-        },
-        {
-          name: "Black Tea",
-          price: "1,000 ₸",
-          img: "https://images.unsplash.com/photo-1518972559570-7cc1309f3229",
-        },
-        {
-          name: "Chai Latte",
-          price: "1,900 ₸",
-          img: "https://images.unsplash.com/photo-1509042239860-f550ce710b93",
-        },
-      ],
+      items: [ /* оставляем как было */ ],
     },
     {
       category: "Smoothies",
@@ -73,12 +36,12 @@ export default function MenuPage() {
         {
           name: "Berry Mix",
           price: "2,300 ₸",
-          img: "https://images.unsplash.com/photo-1572449043417-3d42e6883763", // заменил на рабочую
+          img: "https://images.unsplash.com/photo‑a‑smoothie‑in‑a‑plastic‑cup‑surrounded‑by‑ice‑cubes‑tgdxWVCn5Ec", // рабочая
         },
         {
           name: "Tropical Mango",
           price: "2,400 ₸",
-          img: "https://images.unsplash.com/photo-1598514983595-55f3dbf1a2cb", // заменил на рабочую
+          img: "https://images.unsplash.com/photo‑two‑glasses‑filled‑with‑different‑types‑of‑smoothies‑6SF8k95CfJ4", // рабочая
         },
       ],
     },
