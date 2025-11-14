@@ -33,17 +33,17 @@ export default function MenuPage() {
         {
           name: "Iced Matcha Latte",
           price: "2,200 ₸",
-          img: "https://images.unsplash.com/photo-1593443320739-77f74939d0da",
+          img: "https://images.unsplash.com/photo-1593443320739-77f74939d0da", // рабочая
         },
         {
           name: "Strawberry Matcha",
           price: "2,500 ₸",
-          img: "https://pin.it/43x1jhO2w",
+          img: "https://images.unsplash.com/photo-1617196039312-6d198eaf4e2e", // заменил на рабочую
         },
         {
           name: "Matcha Lemonade",
           price: "2,000 ₸",
-          img: "https://share.google/images/RY2GBr3IY30mkkSnd",
+          img: "https://images.unsplash.com/photo-1600891964599-f61ba0e24092", // заменил на рабочую
         },
       ],
     },
@@ -73,12 +73,12 @@ export default function MenuPage() {
         {
           name: "Berry Mix",
           price: "2,300 ₸",
-          img: "https://share.google/images/qJpiVV4FclS8cmOrs",
+          img: "https://images.unsplash.com/photo-1572449043417-3d42e6883763", // заменил на рабочую
         },
         {
           name: "Tropical Mango",
           price: "2,400 ₸",
-          img: "https://share.google/images/S3N1aFQQ6udTS5CZw",
+          img: "https://images.unsplash.com/photo-1598514983595-55f3dbf1a2cb", // заменил на рабочую
         },
       ],
     },
