@@ -39,11 +39,7 @@ export default function HomePage() {
           price: "1,700 ₸",
           img: "https://images.unsplash.com/photo-1509042239860-f550ce710b93",
         },
-        {
-          name: "Flat White",
-          price: "1,800 ₸",
-          img: "https://images.unsplash.com/photo-1470337458703-46ad1756a187",
-        },
+    
         {
           name: "Caramel Macchiato",
           price: "2,100 ₸",
