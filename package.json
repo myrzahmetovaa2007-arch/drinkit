@@ -1,34 +1,39 @@
 {
+  "name": "drinkit",
+  "version": "1.0.0",
+  "description": "Проект DrinkIt с Next.js и Express",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "dev": "node server.js",
+    "build": "next build",
+    "start": "NODE_ENV=production node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "dependencies": {
     "@auth/prisma-adapter": "^2.11.1",
     "bcrypt": "^6.0.0",
-    "express": "^5.1.0",
+    "express": "^4.22.1",
     "framer-motion": "^12.23.26",
+    "next": "^16.0.10",
     "next-auth": "^4.24.7",
-    "prisma": "^6.19.0"
+    "prisma": "^6.19.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
   },
-  "name": "drinkit",
-  "version": "1.0.0",
-  "description": "",
-  "main": "Node.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+  "devDependencies": {
+    "@types/react": "^19.2.7",
+    "@types/react-dom": "^19.2.3"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/myrzahmetovaa2007-arch/drinkit.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
   "bugs": {
     "url": "https://github.com/myrzahmetovaa2007-arch/drinkit/issues"
   },
-  "homepage": "https://github.com/myrzahmetovaa2007-arch/drinkit#readme",
-  "devDependencies": {
-    "@types/react": "^19.2.7",
-    "@types/react-dom": "^19.2.3"
-  }
+  "homepage": "https://github.com/myrzahmetovaa2007-arch/drinkit#readme"
 }

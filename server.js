@@ -1,15 +1,21 @@
-const express = require('express');
-const path = require('path');
-const app = express();
-const PORT = 3000;
+import express from "express";
+import next from "next";
 
-// Раздаём все статические файлы (HTML, CSS, изображения)
-app.use(express.static(__dirname));
+const dev = process.env.NODE_ENV !== "production";
+const app = next({ dev });
+const handle = app.getRequestHandler();
 
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'index.html'));
-});
+app.prepare().then(() => {
+  const server = express();
 
-app.listen(PORT, () => {
-    console.log(`✅ Сервер запущен: http://localhost:${PORT}`);
+  server.use(express.static("public"));
+
+  // Все маршруты обрабатывает Next.js
+  server.all("/:path*", (req, res) => {
+    return handle(req, res);
+  });
+
+  server.listen(3000, () => {
+    console.log("✅ Сервер запущен: http://localhost:3000");
+  });
 });
