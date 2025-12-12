@@ -1,17 +1,43 @@
 import { redirect } from "next/navigation";
 import { getServerSession } from "next-auth";
-import { authOptions } from;
+import { authOptions } from "@/app/api/auth/[...nextauth]/route";
+import LogoutButton from "@/components/LogoutButton";
 
 export default async function AboutPage() {
   const session = await getServerSession(authOptions);
 
-  // Если не авторизован — редиректим на логин
+  // Если пользователь не авторизован — редиректим на логин
   if (!session) {
     redirect("/login");
   }
 
+  const user = session.user;
+
   return (
     <div className="space-y-32 py-20">
+      {/* ----------------------- USER INFO ----------------------- */}
+      <section className="bg-gray-50 py-12 px-6 border-b">
+        <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+
+          <div className="flex items-center gap-6">
+            <div className="w-20 h-20 rounded-full bg-gray-300 overflow-hidden">
+              {user.image ? (
+                <img src={user.image} alt="User avatar" className="w-full h-full object-cover" />
+              ) : (
+                <div className="w-full h-full bg-gray-200" />
+              )}
+            </div>
+
+            <div>
+              <h2 className="text-2xl font-bold">Welcome, {user.name || "User"}!</h2>
+              <p className="text-gray-600">{user.email}</p>
+            </div>
+          </div>
+
+          <LogoutButton />
+        </div>
+      </section>
+
       {/* ----------------------- HEADER ----------------------- */}
       <section className="text-center max-w-4xl mx-auto">
         <h1 className="text-6xl font-extrabold">
@@ -142,7 +168,6 @@ export default async function AboutPage() {
         </a>
       </section>
 
-      {/* ----------------------- FOOTER ----------------------- */}
       <footer className="border-t pt-12 pb-6 text-center text-gray-600">
         <p>© {new Date().getFullYear()} DrinkIt. All rights reserved.</p>
       </footer>
